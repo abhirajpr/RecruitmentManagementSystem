@@ -1,7 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="RecruitmentManagementSystem.Login" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <table align="center" class="auto-style1">
+    <div class="jumbotron">
+    <table align="center" class="auto-style1" >
         <tr>
 
             <td colspan="3">
@@ -27,19 +28,18 @@
         </tr>
         <tr>
             <td>
-                <asp:Button ID="Login_Button" runat="server" Text="Login" OnClick="Login_Button_Click" />
+                <asp:Button ID="Login_Button" runat="server" Text="Login" OnClick="Login_Button_Click" CssClass="btn-primary" />
             </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td>
+            <td colspan="3">
                 <asp:Label ID="Message" runat="server"></asp:Label>
             </td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
         </tr>
     </table>
+        </div>
 </asp:Content>
 <asp:Content ID="Content3" runat="server" contentplaceholderid="head">
     <style type="text/css">

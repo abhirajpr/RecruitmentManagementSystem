@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="RecruitmentManagementSystem.Register" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    
+    <div class="jumbotron">
     <table align="center" class="auto-style1">
     <tr>
 
@@ -79,7 +79,9 @@
         </td>
     </tr>
 </table>
+        </div>
     <br />
+
 &nbsp;&nbsp;&nbsp; 
 </asp:Content>
 <asp:Content ID="Content2" runat="server" contentplaceholderid="head">
