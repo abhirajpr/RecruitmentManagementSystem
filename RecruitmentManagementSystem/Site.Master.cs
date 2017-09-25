@@ -11,7 +11,21 @@ namespace RecruitmentManagementSystem
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+           
         }
+        public string LblUserName
+        {
+            get
+            {
+                var lblMyLabel = (Label)lvUserInfo.FindControl("lblUserName");
+                return lblMyLabel.Text;
+            }
+            set
+            {
+                var lblMyLabel = (Label)lvUserInfo.FindControl("lblUserName");
+                lblMyLabel.Text = value;
+            }
+        }
+
     }
 }

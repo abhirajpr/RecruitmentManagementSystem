@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -12,15 +13,30 @@ namespace RecruitmentManagementSystem
     public partial class CreateCandidate : System.Web.UI.Page
     {
         SqlConnection con = new SqlConnection("Data Source=SuyPC089;Initial Catalog=RecruitmentManagement;Persist Security Info=True;User ID=sa;Password=Suyati123");
-         
+
+        bool isLoggedIn = (System.Web.HttpContext.Current.User != null) && System.Web.HttpContext.Current.User.Identity.IsAuthenticated;
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["Name"] != null)
+            {
+                if (isLoggedIn)
+                {
+                    ((Site)this.Master).LblUserName = "Hello, " + Session["Name"].ToString();
+                }
+            }
+            else
+            {
+                //Response.Redirect("Login.aspx");
+                //LogoutAction.Redirect("Login.aspx");
+                FormsAuthentication.SignOut();
 
+
+            }
         }
         //protected void imgbutton_Click(object sender, ImageClickEventArgs e)
         //{
         //    Calender1.Visible = !Calender1.Visible;
-            
+
         //}
 
 

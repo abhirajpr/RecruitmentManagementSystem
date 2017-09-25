@@ -8,6 +8,19 @@
             margin:auto;
             padding-left:200px;
         }
+        /*.GridView1{
+            
+            border:1px solid #ddd;
+            border-collapse:collapse; 
+            font-family:Arial, sans-serif; 
+            table-layout:auto; 
+            font-size:14px;
+            
+        }
+        .GridView1 th{
+            background-color:darkgray;
+        }*/
+
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -22,7 +35,7 @@
                    <div id="gridview" class="jumbotron" style="font-family: 'Times New Roman', Times, serif">
 
                    
-                   <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" Height="69px" Width="699px" OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating">
+                   <asp:GridView id="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" Height="69px" Width="699px" OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating" CssClass="table">
                        <Columns>
                            <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
                            <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
